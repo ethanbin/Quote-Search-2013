@@ -82,8 +82,7 @@ namespace CppWinForm1 {
 				quoteList.ignore();					//to skip the space after '-'
 				getline(quoteList, death, ')');		//read in death year up to the closing parantheses
 				quoteList.ignore();					// to skip the \n character
-				Author tempAuthor(author, birth, death);	//creates a variable author with appropriate information to be used for copying
-				Quote tempQuote(line, theme, tempAuthor);	//initialize a new instance of Quote with the info we need, then....
+				Quote tempQuote(line, theme, author, birth, death);	//initialize a new instance of Quote with the info we need, then....
 				MyAuthorQuotes.entry(tempQuote, i);
 				//_Quotes[i].copy(tempQuote, tempAuthor);	//copy it over to _Quotes[i] and now it has the proper values
 			}
@@ -103,8 +102,7 @@ namespace CppWinForm1 {
 					userAddedQuotes.ignore();					//to skip the space after '-'
 					getline(userAddedQuotes, death, ')');		//read in death year up to the closing parantheses
 					userAddedQuotes.ignore();					// to skip the \n character
-					Author tempAuthor(author, birth, death);	//creates a variable author with appropriate information to be used for copying
-					Quote tempQuote(line, theme, tempAuthor);	//initialize a new instance of Quote with the info we need, then....
+					Quote tempQuote(line, theme, author, birth, death);	//initialize a new instance of Quote with the info we need, then....
 					MyAuthorQuotes.entry(tempQuote, i);
 					//_Quotes[i].copy(tempQuote, tempAuthor);	//copy it over to _Quotes[i] and now it has the proper values
 				}
