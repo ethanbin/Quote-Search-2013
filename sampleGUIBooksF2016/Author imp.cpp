@@ -1,6 +1,8 @@
 #pragma once
 #include"Author.h"
 
+Author::Author() :_name("0"), _birthyear("0"), _deathyear("0"){}
+
 Author::Author(std::string name, std::string birth, std::string death)
 {
 	_name = name;
@@ -39,5 +41,3 @@ std::string Author::returnName()
 {
 	return _name;
 }
-
-Author::Author() :_name("0"), _birthyear("0"), _deathyear("0"){}
