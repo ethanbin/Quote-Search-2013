@@ -4,6 +4,7 @@
 class Author
 {
 public:
+	//default constructor - fills _name, _birthyear, and _deathyear as 0
 	Author();
 
 	//copy constructor
@@ -21,5 +22,5 @@ public:
 	//returns "name"
 	std::string returnName();
 private:
-	std::string _name, _birthyear, _deathyear;  // if a year is unknown, input 0
+	std::string _name, _birthyear, _deathyear;
 };
