@@ -10,6 +10,13 @@ Quote::Quote(std::string quoteLine, std::string theme, Author authorInfo)
 	_authorInfo.copy(authorInfo);
 }
 
+Quote::Quote(std::string quoteLine, std::string theme, std::string name, std::string birthyear, std::string deathyear)
+{
+	_quote = quoteLine;
+	_theme = theme;
+	_authorInfo = Author(name, birthyear, deathyear);
+}
+
 void Quote::copy(Quote quoteCopying)
 {
 	_quote = quoteCopying._quote;

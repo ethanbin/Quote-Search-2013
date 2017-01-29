@@ -6,8 +6,11 @@ public:
 	//defaults to "0" for every variable
 	Quote();
 
-	//copy constructor taking string quote, string theme, and Author authorInfo
+	//constructor taking string quote, string theme, and Author authorInfo
 	Quote(std::string, std::string, Author);
+
+	//constructor taking string quote and string theme for the Quote, and string name, string birthyear, and string deathyear for the Author in Quote
+	Quote(std::string, std::string, std::string, std::string, std::string);
 
 	//copy constructor
 	void copy(Quote);
