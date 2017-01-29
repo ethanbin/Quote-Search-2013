@@ -1,5 +1,8 @@
 #pragma once
 #include"Quote.h"
+
+Quote::Quote() :_quote("0"), _theme("0"), _authorInfo("0", "0", "0"){}
+
 Quote::Quote(std::string quoteLine, std::string theme, Author authorInfo)
 {
 	_quote = quoteLine;
@@ -48,5 +51,3 @@ std::string Quote::returnQuoteName()
 	std::string name = _authorInfo.returnName();
 	return name;
 }
-
-Quote::Quote() :_quote("0"), _theme("0"), _authorInfo("0","0","0"){}
