@@ -127,23 +127,10 @@ namespace CppWinForm1 {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::Button^  searchAllEvent;
-	protected:
-
-	protected:
-
 	private: System::Windows::Forms::TextBox^  inputBar;
-
-	protected:
-
-
-
-
 	private: System::Windows::Forms::Button^  searchQuoteEvent;
-
-
-
-
 	private: System::Windows::Forms::Button^  themeSearchEvent;
 	private: System::Windows::Forms::Button^  authorSearchEvent;
 	private: System::Windows::Forms::Button^  yearSearchEvent;
@@ -155,21 +142,11 @@ namespace CppWinForm1 {
 	private: System::Windows::Forms::TextBox^  themeAddBar;
 	private: System::Windows::Forms::RichTextBox^  quotePreview;
 	private: System::Windows::Forms::Button^  previewEvent;
-
-
 	private: System::Windows::Forms::Button^  addQuoteEvent;
-
-
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
-
-
-
-
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::FlowLayoutPanel^  flowLayoutPanel1;
-
-
 	private: System::Windows::Forms::LinkLabel^  linkLabel1;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::MaskedTextBox^  birthAddBar;
@@ -177,14 +154,12 @@ namespace CppWinForm1 {
 	private: System::Windows::Forms::MaskedTextBox^  deathAddBar;
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::RichTextBox^  displayWindow;
-
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -541,6 +516,8 @@ namespace CppWinForm1 {
 
 		}
 #pragma endregion
+
+		//SEARCH FUNCTIONS
 	private: System::Void searchAllEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		String^ userInputSystemString;
 		userInputSystemString = inputBar->Text;
@@ -711,14 +688,16 @@ namespace CppWinForm1 {
 		String^ MyString = gcnew String(searched.c_str());
 		displayWindow->Text = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\t All Quotes\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" + MyString;
 	}
+
 	private: System::Void radioButton1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		searchType = 1;
 	}
+
 	private: System::Void radioButton2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		searchType = 2;
 	}
 
-			 //QUOTE ADDER FUNCTIONS
+		//QUOTE ADDER FUNCTIONS
 	private: System::Void previewEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		String^ preview = quoteAddBar->Text + "\n" + themeAddBar->Text + "\n" + authorAddBar->Text
 			+ " (" + birthAddBar->Text + " - " + deathAddBar->Text + ")";
