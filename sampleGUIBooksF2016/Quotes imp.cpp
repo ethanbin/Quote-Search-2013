@@ -437,8 +437,7 @@ std::string Quotes::searchYear(std::string userInput)
 
 void Quotes::addQuote(std::string quote, std::string theme, std::string author, std::string birth, std::string death, std::string argv1)
 {
-	Author tempAuthor(author, birth, death);
-	Quote toAdd(quote, theme, tempAuthor);
+	Quote toAdd(quote, theme, author, birth, death);
 
 	//create a new user made quote using NEW
 	//this leaves them unsorted. whenever this is called it will require both sorting methods after.
