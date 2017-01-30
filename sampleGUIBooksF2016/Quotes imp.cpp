@@ -7,6 +7,13 @@
 #include <shellapi.h>
 #include <stdlib.h>
 
+Quotes::Quotes()
+{
+	_NumQuotes = 0;
+	_Quotes = '\0';
+	_NumPasses = 0;
+}
+
 Quotes::Quotes(const Quotes & copyFrom)
 {
 	_NumQuotes = copyFrom._NumQuotes;
@@ -453,9 +460,4 @@ void Quotes::addQuote(std::string quote, std::string theme, std::string author, 
 	userAddedQuotes.close();
 	temp = '\0';
 	delete temp;
-}
-
-Quotes::Quotes()
-{
-	_Quotes;
 }

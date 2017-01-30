@@ -703,6 +703,7 @@ namespace CppWinForm1 {
 			+ " (" + birthAddBar->Text + " - " + deathAddBar->Text + ")";
 		quotePreview->Text = preview;
 	}
+
 	private: System::Void addQuoteEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		String^ systemQuote = quoteAddBar->Text;
 		String^ systemTheme = themeAddBar->Text;
