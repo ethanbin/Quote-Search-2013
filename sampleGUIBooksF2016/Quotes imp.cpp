@@ -78,9 +78,13 @@ void Quotes::themeSelectionSort()
 	}
 }
 
-void Quotes::entry(Quote toAdd, int i)
+bool Quotes::entry(Quote toAdd, int i)
 {
-	_Quotes[i].copy(toAdd);
+	if (i < _NumQuotes)
+		_Quotes[i].copy(toAdd);
+	else
+		return false;
+	return true;
 }
 
 int Quotes::authorBinarySearch(std::string userInput)

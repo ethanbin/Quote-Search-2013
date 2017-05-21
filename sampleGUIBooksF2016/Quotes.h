@@ -13,7 +13,9 @@ public:
 	void resize(int);
 	void authorSelectionSort();
 	void themeSelectionSort();
-	void entry(Quote, int);
+	
+	//enters a Quote into _Quotes[i] and returns true if i is within the array. Otherwise, just returns false
+	bool entry(Quote, int);
 	int authorBinarySearch(std::string);
 	int themeBinarySearch(std::string);
 	std::string returnFullQuote(int);
