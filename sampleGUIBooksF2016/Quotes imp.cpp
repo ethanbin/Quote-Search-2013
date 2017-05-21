@@ -22,12 +22,17 @@ Quotes::Quotes(const Quotes & copyFrom)
 		_Quotes[i] = copyFrom._Quotes[i];
 }
 
-void Quotes::operator = (const Quotes & copyFrom)
+Quotes& Quotes::operator = (const Quotes & copyFrom)
 {
-	_NumQuotes = copyFrom._NumQuotes;
-	_Quotes = new Quote[_NumQuotes];
-	for (int i = 0; i < _NumQuotes; i++)
-		_Quotes[i] = copyFrom._Quotes[i];
+	if (this != &copyFrom) {
+		delete[] _Quotes;
+
+		_NumQuotes = copyFrom._NumQuotes;
+		_Quotes = new Quote[_NumQuotes];
+		for (int i = 0; i < _NumQuotes; i++)
+			_Quotes[i] = copyFrom._Quotes[i];
+	}
+	return *this;
 }
 
 Quotes::~Quotes()

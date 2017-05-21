@@ -7,7 +7,7 @@ class Quotes
 public:
 	Quotes();
 	Quotes(const Quotes &);
-	void operator = (const Quotes &);
+	Quotes& operator = (const Quotes &);
 	~Quotes();
 
 	void resize(int);
